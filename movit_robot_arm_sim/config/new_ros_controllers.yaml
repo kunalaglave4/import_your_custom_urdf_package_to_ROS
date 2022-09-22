@@ -1,0 +1,20 @@
+#This is a movit contoller connecting follow_joint_trajectory controller with JointTrajectoryController
+
+controller_list:
+  - name: robot_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+  - name: hand_ee_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+    - joint_6
+    - joint_7
+
